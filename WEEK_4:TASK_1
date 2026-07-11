@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Professional Weather App</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#4facfe,#00c6ff,#43cea2,#185a9d);
+background-size:400% 400%;
+animation:bgAnimation 12s ease infinite;
+min-height:100vh;
+
+}
+
+@keyframes bgAnimation{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+/* Navigation */
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(12px);
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:bold;
+color:white;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:25px;
+
+}
+
+nav ul li a{
+
+color:white;
+text-decoration:none;
+font-size:17px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#FFD700;
+
+}
+
+/* Weather Card */
+
+.container{
+
+width:450px;
+
+margin:40px auto;
+
+background:rgba(255,255,255,0.20);
+
+backdrop-filter:blur(18px);
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+text-align:center;
+
+color:white;
+
+}
+
+.weather-icon{
+
+font-size:90px;
+
+margin-bottom:10px;
+
+animation:float 3s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-10px);}
+
+100%{transform:translateY(0);}
+
+}
+
+.city{
+
+font-size:32px;
+
+font-weight:bold;
+
+}
+
+.temperature{
+
+font-size:65px;
+
+font-weight:bold;
+
+margin:10px 0;
+
+}
+
+.condition{
+
+font-size:24px;
+
+margin-bottom:20px;
+
+}
+
+.info{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.box{
+
+background:rgba(255,255,255,.25);
+
+padding:15px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.box:hover{
+
+transform:scale(1.05);
+
+background:rgba(255,255,255,.35);
+
+}
+
+input{
+
+width:100%;
+
+padding:10px;
+
+border:none;
+
+border-radius:8px;
+
+margin-top:8px;
+
+font-size:15px;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:12px 30px;
+
+border:none;
+
+border-radius:10px;
+
+background:#FFD700;
+
+color:#003366;
+
+font-size:17px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:white;
+
+transform:scale(1.05);
+
+}
+
+footer{
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+@media(max-width:500px){
+
+.container{
+
+width:90%;
+
+}
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+🌤 Weather App
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Weather</a></li>
+
+<li><a href="#">Forecast</a></li>
+
+<li><a href="#">Alerts</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+    <div class="weather-icon" id="weatherIcon">
+
+☀️
+
+</div>
+
+<div class="city">
+
+Chennai, Tamil Nadu
+
+</div>
+
+<div class="temperature" id="temperature">
+
+32°C
+
+</div>
+
+<div class="condition" id="weatherCondition">
+
+Sunny
+
+</div>
+
+<div class="info">
+
+<div class="box">
+
+💧<br>
+
+Humidity
+
+<br><br>
+
+<b id="humidity">65%</b>
+
+</div>
+
+<div class="box">
+
+💨<br>
+
+Wind Speed
+
+<br><br>
+
+<b id="wind">12 km/h</b>
+
+</div>
+
+<div class="box">
+
+🌅<br>
+
+Sunrise
+
+<br><br>
+
+<b>6:05 AM</b>
+
+</div>
+
+<div class="box">
+
+🌇<br>
+
+Sunset
+
+<br><br>
+
+<b>6:42 PM</b>
+
+</div>
+
+<div class="box">
+
+🌡️<br>
+
+Feels Like
+
+<br><br>
+
+<b id="feelsLike">34°C</b>
+
+</div>
+
+<div class="box">
+
+🌬️<br>
+
+Air Pressure
+
+<br><br>
+
+<b>1012 hPa</b>
+
+</div>
+
+<div class="box">
+
+👁️<br>
+
+Visibility
+
+<br><br>
+
+<b>10 km</b>
+
+</div>
+
+<div class="box">
+
+☔<br>
+
+Rain Chance
+
+<br><br>
+
+<b id="rain">10%</b>
+
+</div>
+
+<div class="box">
+
+🌈<br>
+
+UV Index
+
+<br><br>
+
+<b id="uv">6</b>
+
+</div>
+
+<div class="box">
+
+📍<br>
+
+Location
+
+<br><br>
+
+<b>Chennai, India</b>
+
+</div>
+
+<div class="box">
+
+📅<br>
+
+Select Date
+
+<input type="date" id="userDate">
+
+</div>
+
+<div class="box">
+
+🕒<br>
+
+Select Time
+
+<input type="time" id="userTime">
+
+</div>
+
+</div>
+
+<button onclick="showWeather()">
+
+🌤 Show Weather
+
+</button>
+
+<button onclick="refreshWeather()">
+
+🔄 Refresh
+
+</button>
+
+<div style="margin-top:25px;
+background:rgba(255,255,255,.25);
+padding:15px;
+border-radius:15px;">
+
+<h3>Selected Date & Time</h3>
+
+<br>
+
+<p id="date">
+
+📅 Date Not Selected
+
+</p>
+
+<br>
+
+<p id="time">
+
+🕒 Time Not Selected
+
+</p>
+
+</div>
+</div>
+
+<footer>
+
+© 2026 Professional Weather App
+
+</footer>
+
+<script>
+
+function showWeather(){
+
+let date=document.getElementById("userDate").value;
+let time=document.getElementById("userTime").value;
+
+if(date=="" || time==""){
+
+alert("Please select Date and Time.");
+
+return;
+
+}
+
+let parts=time.split(":");
+
+let hour=parseInt(parts[0]);
+
+let minute=parts[1];
+
+let period="AM";
+
+if(hour>=12){
+
+period="PM";
+
+}
+
+let displayHour=hour;
+
+if(displayHour>12){
+
+displayHour-=12;
+
+}
+
+if(displayHour==0){
+
+displayHour=12;
+
+}
+
+document.getElementById("date").innerHTML=
+"📅 "+date;
+
+document.getElementById("time").innerHTML=
+"🕒 "+displayHour+":"+minute+" "+period;
+
+/* Morning */
+
+if(hour>=6 && hour<12){
+
+document.getElementById("weatherIcon").innerHTML="🌤️";
+
+document.getElementById("weatherCondition").innerHTML="Morning - Sunny";
+
+document.getElementById("temperature").innerHTML="28°C";
+
+document.getElementById("humidity").innerHTML="70%";
+
+document.getElementById("wind").innerHTML="8 km/h";
+
+document.getElementById("feelsLike").innerHTML="30°C";
+
+document.getElementById("rain").innerHTML="5%";
+
+document.getElementById("uv").innerHTML="4";
+
+}
+
+/* Afternoon */
+
+else if(hour>=12 && hour<17){
+
+document.getElementById("weatherIcon").innerHTML="☀️";
+
+document.getElementById("weatherCondition").innerHTML="Afternoon - Hot";
+
+document.getElementById("temperature").innerHTML="35°C";
+
+document.getElementById("humidity").innerHTML="55%";
+
+document.getElementById("wind").innerHTML="14 km/h";
+
+document.getElementById("feelsLike").innerHTML="39°C";
+
+document.getElementById("rain").innerHTML="10%";
+
+document.getElementById("uv").innerHTML="9";
+
+}
+
+/* Evening */
+
+else if(hour>=17 && hour<19){
+
+document.getElementById("weatherIcon").innerHTML="🌇";
+
+document.getElementById("weatherCondition").innerHTML="Evening - Cloudy";
+
+document.getElementById("temperature").innerHTML="30°C";
+
+document.getElementById("humidity").innerHTML="65%";
+
+document.getElementById("wind").innerHTML="10 km/h";
+
+document.getElementById("feelsLike").innerHTML="31°C";
+
+document.getElementById("rain").innerHTML="20%";
+
+document.getElementById("uv").innerHTML="3";
+
+}
+
+/* Night */
+
+else{
+
+document.getElementById("weatherIcon").innerHTML="🌙";
+
+document.getElementById("weatherCondition").innerHTML="Night - Clear Sky";
+
+document.getElementById("temperature").innerHTML="24°C";
+
+document.getElementById("humidity").innerHTML="80%";
+
+document.getElementById("wind").innerHTML="6 km/h";
+
+document.getElementById("feelsLike").innerHTML="23°C";
+
+document.getElementById("rain").innerHTML="15%";
+
+document.getElementById("uv").innerHTML="0";
+
+}
+
+alert("Weather Updated Successfully!");
+
+}
+
+function refreshWeather(){
+
+location.reload();
+
+}
+
+</script>
+
+</body>
+
+</html>
+<script>
+
+// Navigation Menu
+
+document.querySelectorAll("nav a").forEach(link => {
+
+link.addEventListener("click",function(event){
+
+event.preventDefault();
+
+alert(this.innerHTML + " Page Opened");
+
+});
+
+});
+
+// Welcome Message
+
+window.onload=function(){
+
+setTimeout(function(){
+
+alert("🌤 Welcome to the Professional Weather App!");
+
+},500);
+
+};
+
+// Theme Changer
+
+let darkMode=false;
+
+function changeTheme(){
+
+if(!darkMode){
+
+document.body.style.background=
+"linear-gradient(135deg,#141E30,#243B55)";
+
+document.querySelector(".container").style.color="white";
+
+darkMode=true;
+
+}
+
+else{
+
+document.body.style.background=
+"linear-gradient(-45deg,#4facfe,#00c6ff,#43cea2,#185a9d)";
+
+document.querySelector(".container").style.color="white";
+
+darkMode=false;
+
+}
+
+}
+
+</script>
+
+<div style="text-align:center; margin-bottom:20px;">
+
+<button onclick="changeTheme()">
+
+🌙 Change Theme
+
+</button>
+
+</div>
+
+<footer>
+
+🌤 Professional Weather App <br>
+
+Designed By Jayashree S ❤️ <br>
+
+© 2026 All Rights Reserved
+
+</footer>
+
+</body>
+
+</html>
