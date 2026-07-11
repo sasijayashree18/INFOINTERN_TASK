@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#FF9A9E,#F6416C,#FF9671);
+}
+
+.container{
+width:420px;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+text-align:center;
+}
+
+h1{
+color:#E91E63;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+text-align:left;
+margin-bottom:8px;
+font-weight:bold;
+color:#444;
+}
+
+input{
+width:100%;
+padding:12px;
+font-size:16px;
+border:2px solid #F8BBD0;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+input:focus{
+outline:none;
+border-color:#E91E63;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+}
+
+button{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+color:white;
+}
+
+.calculate{
+background:#FF4081;
+}
+
+.calculate:hover{
+background:#E91E63;
+transform:scale(1.05);
+}
+
+.reset{
+background:#7E57C2;
+}
+
+.reset:hover{
+background:#5E35B1;
+transform:scale(1.05);
+}
+
+.result{
+margin-top:20px;
+background:#FFF0F5;
+padding:15px;
+border-radius:10px;
+font-size:20px;
+line-height:1.8;
+color:#444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Age Calculator</h1>
+
+<label>Select Your Date of Birth</label>
+
+<input type="date" id="dob">
+
+<div class="buttons">
+
+<button class="calculate" onclick="calculateAge()">
+Calculate Age
+</button>
+
+<button class="reset" onclick="resetData()">
+Reset
+</button>
+
+</div>
+
+<div class="result" id="result">
+Your age will appear here.
+</div>
+
+</div>
+
+<script>
+
+function calculateAge(){
+
+let dob=document.getElementById("dob").value;
+
+if(dob==""){
+
+alert("Please select your Date of Birth");
+
+return;
+
+}
+
+let birthDate=new Date(dob);
+
+let today=new Date();
+
+let years=today.getFullYear()-birthDate.getFullYear();
+
+let months=today.getMonth()-birthDate.getMonth();
+
+let days=today.getDate()-birthDate.getDate();
+
+if(days<0){
+
+months--;
+
+let previousMonth=new Date(today.getFullYear(),today.getMonth(),0);
+
+days+=previousMonth.getDate();
+
+}
+
+if(months<0){
+
+years--;
+
+months+=12;
+
+}
+
+document.getElementById("result").innerHTML=
+
+"<b>Your Age</b><br><br>"+
+
+years+" Years<br>"+
+
+months+" Months<br>"+
+
+days+" Days";
+
+}
+
+function resetData(){
+
+document.getElementById("dob").value="";
+
+document.getElementById("result").innerHTML="Your age will appear here.";
+
+}
+
+</script>
+
+</body>
+</html>
