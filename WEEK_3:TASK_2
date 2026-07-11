@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Background Color Changer</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#f4f4f4;
+    transition:0.5s;
+}
+
+.container{
+    width:650px;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:#333;
+    margin-bottom:15px;
+}
+
+p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* Button Colors */
+
+.red{
+    background:#FF4B5C;
+}
+
+.blue{
+    background:#3498DB;
+}
+
+.green{
+    background:#2ECC71;
+}
+
+.purple{
+    background:#9B59B6;
+}
+
+.orange{
+    background:#F39C12;
+}
+
+.yellow{
+    background:#FDD835;
+    color:black;
+}
+
+.pink{
+    background:#EC407A;
+}
+
+.sky{
+    background:#29B6F6;
+}
+
+.teal{
+    background:#26A69A;
+}
+
+.brown{
+    background:#8D6E63;
+}
+
+.gray{
+    background:#78909C;
+}
+
+.black{
+    background:#424242;
+}
+
+.white{
+    background:white;
+    color:black;
+    border:2px solid gray;
+}
+
+.reset{
+    background:#34495E;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎨 Background Color Changer</h1>
+
+<p>Click any button to change the background color.</p>
+
+<div class="buttons">
+
+<button class="red" onclick="changeColor('#FFCDD2')">Red</button>
+
+<button class="blue" onclick="changeColor('#BBDEFB')">Blue</button>
+
+<button class="green" onclick="changeColor('#C8E6C9')">Green</button>
+
+<button class="purple" onclick="changeColor('#E1BEE7')">Purple</button>
+
+<button class="orange" onclick="changeColor('#FFE0B2')">Orange</button>
+
+<button class="yellow" onclick="changeColor('#FFF9C4')">Yellow</button>
+
+<button class="pink" onclick="changeColor('#F8BBD0')">Pink</button>
+
+<button class="sky" onclick="changeColor('#B3E5FC')">Sky Blue</button>
+
+<button class="teal" onclick="changeColor('#B2DFDB')">Teal</button>
+
+<button class="brown" onclick="changeColor('#D7CCC8')">Brown</button>
+
+<button class="gray" onclick="changeColor('#CFD8DC')">Gray</button>
+
+<button class="black" onclick="changeColor('#424242')">Dark</button>
+
+<button class="white" onclick="changeColor('#FFFFFF')">White</button>
+
+<button class="reset" onclick="changeColor('#F4F4F4')">Reset</button>
+
+</div>
+
+</div>
+
+<script>
+
+function changeColor(color){
+
+document.body.style.background=color;
+
+}
+
+</script>
+
+</body>
+</html>
