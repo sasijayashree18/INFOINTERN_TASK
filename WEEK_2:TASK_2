@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Product Card</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    padding:20px;
+}
+
+.card{
+    width:350px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+.image-box{
+    position:relative;
+}
+
+.image-box img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.discount{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.content{
+    padding:20px;
+}
+
+h2{
+    color:#003366;
+    margin-bottom:8px;
+}
+
+.rating{
+    color:gold;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.description{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.price{
+    margin-bottom:15px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    margin-right:10px;
+}
+
+.new-price{
+    color:green;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.features{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.feature{
+    background:#eef6ff;
+    width:48%;
+    text-align:center;
+    padding:10px;
+    border-radius:10px;
+    font-size:14px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cart{
+    background:#ff9800;
+    color:white;
+}
+
+.cart:hover{
+    background:#e68900;
+}
+
+.buy{
+    background:#0066cc;
+    color:white;
+}
+
+.buy:hover{
+    background:#003366;
+}
+
+@media(max-width:400px){
+
+.card{
+    width:100%;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="image-box">
+
+<div class="discount">
+20% OFF
+</div>
+
+<img src="https://tse4.mm.bing.net/th/id/OIP.niQ0wix9A_rsSEhK635kkgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Wireless Headphones">
+
+</div>
+
+<div class="content">
+
+<h2>Wireless Headphones</h2>
+
+<div class="rating">
+★★★★★ (4.8/5)
+</div>
+
+<p class="description">
+Experience crystal-clear sound with deep bass, noise cancellation,
+Bluetooth 5.3 connectivity and up to 30 hours of battery life.
+Perfect for music, gaming and online meetings.
+</p>
+
+<div class="price">
+
+<span class="old-price">
+₹3,999
+</span>
+
+<span class="new-price">
+₹2,999
+</span>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+🚚<br>
+Free Delivery
+</div>
+
+<div class="feature">
+🛡️<br>
+1 Year Warranty
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="cart">
+🛒 Add to Cart
+</button>
+
+<button class="buy">
+⚡ Buy Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
