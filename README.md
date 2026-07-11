@@ -1,58 +1,156 @@
-# 🌐 Week 4 Frontend Projects
+# 🌐 Frontend Development Internship Projects
 
-This repository contains two frontend projects developed using **HTML, CSS, and JavaScript**. These projects focus on building responsive user interfaces and implementing basic JavaScript functionality.
+Welcome to my **Frontend Development Internship Repository**! 🚀
+
+This repository contains all the projects and tasks completed during my internship. Each week focuses on different frontend technologies and concepts using **HTML, CSS, and JavaScript**.
 
 ---
 
-## 📌 Projects Included
+# 📅 Week 1 – HTML Basics
 
-### 🌤️ Project 1: Weather UI Design
-
-A modern and responsive weather dashboard with an attractive user interface.
+### 📌 Project 1: Personal Introduction Page
+A simple webpage introducing myself.
 
 ### Features
-- 🌡️ Temperature Display
-- ☀️ Dynamic Weather Icon
-- 🌤️ Weather Condition
+- 👤 Personal Information
+- 🖼️ Profile Image
+- 📝 Short Biography
+- 🎓 Education Details
+- 🎨 Basic HTML Structure
+- 📱 Responsive Layout
+
+---
+
+### 📌 Project 2: Student Profile Page
+
+### Features
+- 👤 Personal Details
+- ❤️ Hobbies
+- 💡 Interests
+- 📧 Contact Information
+- 📚 Education Details
+- 🎨 Attractive UI Design
+
+---
+
+# 📅 Week 2 – HTML & CSS Projects
+
+### 📌 Project 1: Portfolio / Resume Website
+
+### Features
+- 👤 Personal Introduction
+- 🎓 Education
+- 💻 Technical Skills
+- 🏆 Certifications
+- 📂 Projects
+- 📞 Contact Section
+- 🎨 Responsive Design
+
+---
+
+### 📌 Project 2: Product Card
+
+### Features
+- 🛍️ Product Image
+- 🏷️ Discount Badge
+- ⭐ Star Rating
+- 💰 Price & Discount
+- 🚚 Free Delivery
+- 🛡️ Warranty
+- 🛒 Add to Cart
+- ⚡ Buy Now
+- 🎨 Hover Animation
+- 📱 Responsive Layout
+
+---
+
+# 📅 Week 3 – JavaScript Projects
+
+### 📌 Project 1: Age Calculator
+
+### Features
+- 🎂 Calculate Age
+- 📅 Date Picker
+- 🧮 Age in Years, Months & Days
+- 🔄 Reset Button
+- 🎨 Attractive UI
+- 📱 Responsive Design
+
+---
+
+### 📌 Project 2: Background Color Changer
+
+### Features
+- 🎨 Multiple Color Buttons
+- 🌈 Dynamic Background Color
+- ✨ Hover Effects
+- 🔄 Reset Button
+- 📱 Responsive Layout
+
+---
+
+### 📌 Project 3: Calculator
+
+### Features
+- ➕ Addition
+- ➖ Subtraction
+- ✖ Multiplication
+- ➗ Division
+- 📊 Percentage
+- 🔢 Number Buttons
+- 🟰 Equals
+- ⌫ Backspace
+- 🧹 Clear Button
+- 📌 Decimal Support
+- ➖ Negative Number Support
+- 🎨 Responsive UI
+
+---
+
+# 📅 Week 4 – Frontend Projects
+
+### 📌 Project 1: Weather UI Design
+
+### Features
+- 🌤️ Weather Icon
+- 🌡️ Temperature
+- 🌥️ Weather Condition
+- 📍 Location
 - 💧 Humidity
 - 💨 Wind Speed
-- 🌅 Sunrise & Sunset
+- 🌅 Sunrise
+- 🌇 Sunset
 - 🌬️ Air Pressure
 - 👁️ Visibility
-- 🌈 UV Index
 - ☔ Rain Chance
-- 📍 Location
+- 🌈 UV Index
 - 📅 Date Selection
-- 🕒 Time Selection with AM/PM
-- 🎨 Animated Gradient Background
+- 🕒 Time Selection (AM/PM)
+- 🔄 Refresh Weather
 - 🧭 Navigation Bar
+- 🎨 Animated Gradient Background
 - 📱 Responsive Design
-- ✨ Hover Effects
 
 ---
 
-### 🔐 Project 2: Login Form
-
-A professional login page with user-friendly validation and responsive design.
+### 📌 Project 2: Login Form
 
 ### Features
-- 👤 Username Field
-- 🔒 Password Field
+- 👤 Username
+- 🔒 Password
 - 👁️ Show/Hide Password
-- ✔️ Basic Form Validation
+- ✔️ Form Validation
 - 🚪 Login Button
 - 🔄 Reset Button
-- 🔑 Forgot Password Link
+- 🔑 Forgot Password
 - 📝 Sign Up Link
+- 🎨 Glassmorphism Design
 - 🧭 Navigation Bar
-- 🎨 Animated Gradient Background
-- 💎 Glassmorphism UI
-- 📱 Responsive Design
-- ✨ Hover Animations
+- 📱 Responsive Layout
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 - HTML5
 - CSS3
@@ -60,67 +158,82 @@ A professional login page with user-friendly validation and responsive design.
 
 ---
 
-## 📂 Project Structure
+# 📂 Repository Structure
 
-```
-Week4-Frontend-Projects/
+```text
+Frontend-Development-Internship/
 │
-├── WeatherUI/
-│   ├── index.html
-│   └── README.md
+├── Week-1/
+│   ├── Personal Introduction Page
+│   └── Student Profile Page
 │
-├── LoginForm/
-│   ├── index.html
-│   └── README.md
+├── Week-2/
+│   ├── Portfolio Website
+│   └── Product Card
+│
+├── Week-3/
+│   ├── Age Calculator
+│   ├── Background Color Changer
+│   └── Calculator
+│
+├── Week-4/
+│   ├── Weather UI Design
+│   └── Login Form
 │
 └── README.md
 ```
 
 ---
 
-## 🎯 Learning Outcomes
+# 🎯 Skills Gained
 
-- Built responsive web pages using HTML and CSS.
-- Implemented JavaScript for user interaction and validation.
-- Designed modern UI with gradient backgrounds and animations.
-- Created reusable and clean frontend components.
-- Improved understanding of DOM manipulation and event handling.
-
----
-
-## 📸 Screenshots
-
-Add screenshots of your projects here.
-
-Example:
-
-```
-Weather UI Screenshot
-Login Form Screenshot
-```
+- 🌐 HTML5 Page Structure
+- 🎨 CSS3 Styling & Animations
+- 📱 Responsive Web Design
+- ⚡ JavaScript Fundamentals
+- 🧩 DOM Manipulation
+- 🎯 Event Handling
+- 📝 Form Validation
+- 💻 UI/UX Design Principles
+- 🔧 Problem Solving
+- 🚀 Frontend Development
 
 ---
 
-## 🚀 Future Enhancements
+# 📸 Project Screenshots
 
-- Connect the Weather UI to a live Weather API.
-- Add user authentication for the Login Form.
-- Store login details using Local Storage.
-- Improve accessibility and performance.
-- Add dark/light mode toggle.
+Add screenshots of each project here.
+
+- 📷 Week 1 Projects
+- 📷 Week 2 Projects
+- 📷 Week 3 Projects
+- 📷 Week 4 Projects
 
 ---
 
-## 👩‍💻 Author
+# 🚀 Future Enhancements
+
+- 🌍 Connect Weather UI with Live Weather API
+- 🔐 User Authentication System
+- 💾 Local Storage Integration
+- 🌙 Dark & Light Theme
+- 📊 Dashboard UI
+- 📱 Enhanced Mobile Experience
+
+---
+
+# 👩‍💻 Author
 
 **Jayashree S**
 
-- GitHub: https://github.com/sasijayashree18
+🎓 B.E. Computer Science and Engineering
+
+🔗 **GitHub:** https://github.com/sasijayashree18
 
 ---
 
-## ⭐ Support
+# ⭐ Show Your Support
 
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
+If you found these projects useful, please ⭐ star this repository and share your feedback!
 
-Happy Coding! 🚀
+Happy Coding! 🚀✨
