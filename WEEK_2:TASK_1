@@ -1,0 +1,163 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jayashree S - Styled Resume</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf4ff;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 75%;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .contact {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #0066cc;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #333333;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JAYASHREE S</h1>
+
+    <div class="contact">
+        <p><strong>Phone:</strong> 8807053936</p>
+        <p><strong>Email:</strong> jayashree.s18082005@gmail.com</p>
+        <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/jayashree-s-904052361</p>
+    </div>
+
+    <h2>Career Objective</h2>
+
+    <p>
+        Computer Science and Engineering undergraduate with skills in Python Programming,
+        Full Stack Development, UI/UX Design, Cloud Computing, and Digital Marketing.
+        Passionate about building innovative, user-focused solutions and growing in the technology industry.
+    </p>
+
+    <h2>Education</h2>
+
+    <ul>
+        <li>
+            <strong>B.E. Computer Science & Engineering</strong><br>
+            Misrimal Navajee Munoth Jain Engineering College<br>
+            Affiliated to Anna University (2023 – 2027)
+        </li>
+
+        <li>
+            Higher Secondary (12th)<br>
+            Terapanth Jain Vidyalaya Mat. Hr. Sec. School (2023)
+        </li>
+
+        <li>
+            Secondary (10th)<br>
+            Terapanth Jain Vidyalaya Mat. Hr. Sec. School (2022)
+        </li>
+    </ul>
+
+    <h2>Technical Skills</h2>
+
+    <p>
+        <strong>Programming Languages:</strong> Python, Java, C
+    </p>
+
+    <p>
+        <strong>Web Technologies:</strong> HTML, Cloud Computing
+    </p>
+
+    <p>
+        <strong>Database:</strong> SQL, SQLite
+    </p>
+
+    <p>
+        <strong>Libraries:</strong> Pandas, NumPy, Matplotlib
+    </p>
+
+    <p>
+        <strong>Tools:</strong> Git, Power BI, Figma, Adobe Suite, Canva, VS Code
+    </p>
+
+    <p>
+        <strong>Core Concepts:</strong> Data Structures, DBMS, Operating Systems, Algorithms, Computer Networks, UI/UX Design
+    </p>
+
+    <h2>Projects</h2>
+
+    <ul>
+        <li>
+            <strong>Portfolio Website</strong> – Developed a responsive personal portfolio website using HTML, CSS and React.js to showcase projects and skills.
+        </li>
+
+        <li>
+            <strong>Placement Tracker Application</strong> – Built using JavaScript, HTML and SQL to manage placement details with a user-friendly interface.
+        </li>
+    </ul>
+
+    <h2>Internships</h2>
+
+    <ul>
+        <li><strong>CodSoft</strong> – Python Programming Intern (1 Month)</li>
+        <li><strong>Ediglobe</strong> – UI/UX Intern (3 Months)</li>
+        <li><strong>Prodigy Infotech</strong> – Software Development Intern (1 Month)</li>
+    </ul>
+
+    <h2>Certifications</h2>
+
+    <ul>
+        <li>Java – GUVI</li>
+        <li>Database Management System – NPTEL</li>
+        <li>Java, Python & Big Data – Infosys Springboard</li>
+    </ul>
+
+    <h2>Achievements</h2>
+
+    <ul>
+        <li>Solved 20+ coding problems on HackerRank and LeetCode.</li>
+        <li>Developed 3+  Data Science projects.</li>
+        <li>Participated in coding contests and hackathons.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
+```
